@@ -1,0 +1,54 @@
+app name = sendit
+app purpose = convert currencies seamlessly between west african countries
+major focus = create a modern beutiful user interface and integrate an API for handling the conversion using card payment(specifically an api that can handle indempotency and all sort of possible errors) into the backend (django)
+currencies and countries :
+    * Nigeria(nngn)             eng
+    * Ghana(ghs)                "
+    * benin & cote devoire(xof) French
+    * senegal, togo, burkina, mail, niger, guinea beusau (xof) Portugese
+    
+dropped countries for now:
+    * Seria lonne eng = the recent dropped 3 zeros might affect me
+    * cape verde (cve)   = completely isolated from the others payment rail system
+    * guinea (gnf)  =heavily regulated
+    * Liberia(lrd) = api integration is very difficult
+    * gambia(gmd) =     "
+
+api to use = main - Fincra , alternative - Flutterwave(handle eng payment properly , misbehave in french)
+
+#django rest framework design
+database = Supabase
+deployment = Vercel
+rate limiting = 
+
+VIEWS
+*CUSTOM TOKENS
+    *one token per user
+    *recycle token every login(fact check the current token)
+    *
+
+
+
+
+
+flutter app preuiqstique
+* lang support = english, portugese and french 
+* for Nigerians, local transfer is allowed (debit one bank and credit another bank)
+* kyc1 validation(for 50k naira or 500 cedis) :     * nigerians = NIN
+                                                    * ghana     = Ghana Card Number
+                                                    * frenchs   = National ID
+*Kyc2 validation (>= 50k naira and <= 200k naira):  * nigerians = Bvn
+
+
+#flutter app design
+App launch ---> splashscreen(logo of app at the middle) ----> (check for token, and email(its not possible email will not exist if token exist) in the local hive)
+    token found --->(if lock is enabled in the setting, open a ui asking for 4 digit numerical passkey)--> open welcome back login page asking for password displaying the found email right above the password prompt --->  (valid password[fact_check against an endpoint i will provide]) --> go to dashboard with incoming data from the password being username
+    token not found ---> open intro page about what app does(a ransition animation between )
+
+
+
+flutter pages
+AUTH
+1. intro_page (smooth_page_indicator package for switching pictures about what app do, and a next btn(signup and login at the end) at the bottom )
+2.1 signup page (ask for email,firstname, surname, a gridbox for selecting country(flags showing))
+2.2 login page(ask for email and password)

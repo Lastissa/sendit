@@ -1,0 +1,8 @@
+INTROO_PAGE
+target = a app for currency exchange create that work both as website and mobile application with extreme responsivness.
+build scope = we do the pages one by one.
+target = mobile app(android and ios) and website(pc and mobiles orientation)
+current task =craete a responsive class named IntroPage inside the intro_page.dart, extends the class with the cunsumerwisget(the riverpod equiv for stateful widget), the class should use stack as the base widget
+inside the stack , use a modern visual effect for the overall page background, make use of the smoothpgae indicator paasckage and the pageview builder for displaying three visual (rich text plus detailed visual respresenration about what the entire app is about(bne e creative with the word you will use for thr three mages), nb: the images will live in assets/intro_umages and they should be an svg file type, use the flutter_svg i already installed to dispay then and resize them to make them ersponsive on all devices), 
+add a btn at the button of the entre page dispaying next if the user does not feel like swiping , and on the last img display, the buttom twxt should be "Create arround" and "login"(two btns now) bith of which i will provide wheer they will go on their ontap/onpressed, 
+needed/important: THIS IS A PROJECT FOR BOTH WEBSITE AND MOBILE MEANING ITS IMPORTANT RESPONSIVEESS IS ACCCURATE AND VERY CRITICAL, HOVE EFFECT TOO IS CRITICAL FOR THE WEB SIDE AND RESPONSIVESS SHOULD CHANGE AS DEVICE SIZE CHANGES , DESIG SHOULD BE VERY MODER AND UNIQUE SHOWING TRUE BRILLIANCE AND A SENIOUR SOFTWARE ENGINNER SKILLS 
